@@ -1,4 +1,5 @@
 from pydantic import BaseModel, validator, ValidationError 
+from pydantic import BaseModel, validator, ValidationError
 class Jeux (BaseModel):
     console_jeu: str
     genre : str
@@ -6,7 +7,6 @@ class Jeux (BaseModel):
     description : str
     code_rayon : str 
     id_jeu : str 
-
 
     @validator('code_rayon')
     def check_code_rayon(cls, code_rayon, values):
